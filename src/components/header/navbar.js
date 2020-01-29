@@ -11,6 +11,7 @@ class Navbar extends React.Component {
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/stuff">Stuff</NavLink></li>
                             <li><NavLink to="/contact">Contact</NavLink></li>
+                            <li><NavLink to="/mergesort">Merge Sort</NavLink></li>
                         </ul>
                     </nav>
                 </HashRouter>

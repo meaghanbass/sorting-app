@@ -9,6 +9,7 @@ import {
 import Home from "./Home";
 import Stuff from "./Stuff";
 import Contact from "./Contact";
+import MergeSort from "./mergeSort";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
               <Route exact path="/" component={Home}/>
               <Route path="/stuff" component={Stuff}/>
               <Route path="/contact" component={Contact}/>
+              <Route path="/mergesort" component={MergeSort}/>
             </div>
         </HashRouter>
         <Footer />
