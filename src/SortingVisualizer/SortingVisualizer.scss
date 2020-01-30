@@ -1,0 +1,17 @@
+* {
+    text-align: center;
+}
+
+.array-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .array-bar {
+        width: 2px;
+        // background-color: #61DAFB;
+        opacity: 0.5;
+        background-color: #33373F;
+        display: inline-block;
+        margin: 0 1px;
+    }
+}
