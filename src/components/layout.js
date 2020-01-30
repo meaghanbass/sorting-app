@@ -4,9 +4,9 @@ const Layout = ({children}) => {
         return (
             <React.Fragment>
                 <main>
-                    <div className="container">
+                    {/* <div className="wrapper"> */}
                         {children}
-                    </div>
+                    {/* </div> */}
                 </main>
             </React.Fragment>
         );
