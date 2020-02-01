@@ -1,3 +1,11 @@
+$bg-white: #FFFFFF;
+$bg-lt: #A2AED2;
+$bg-md: #58617D;
+$bg-dk: #10182F;
+$txt-lt: #A2AED2;
+$txt-md: #58617D;
+$txt-dk: #10182F;
+
 * {
     text-align: center;
 }
@@ -21,8 +29,45 @@
             font-family: 'Titillium Web', sans-serif;
             font-size: 1rem;
             margin: 0px 1rem;
-            &:hover {
+
+            height: max-content;
+            display: flex;
+            align-self: center;
+            position: relative;
+            &:before,
+            &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 0;
+
+            }
+            &:before{
+                transition: width 0s ease, background .4s ease;
+                left: 0;
+                right: 0;
+                bottom: -5px;
+            }
+            &:after{
+                right: 2.2%;
+                bottom: -5px;
+                background: $txt-lt;
+                transition: width .0s ease;
+            }
+            
+            &:hover{
                 cursor: pointer;
+                &:before{
+                    width: 100%;
+                    background: $txt-lt;
+                    transition: width 0.8s ease;
+                }
+                &:after{
+                    width: 100%;
+                    background: 0 0;
+                    transition: all 0s ease;
+                }
             }
         }
     }
