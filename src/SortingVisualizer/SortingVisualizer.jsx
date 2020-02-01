@@ -4,6 +4,8 @@ import {getMergeSortAnimations} from '../SortingAlgorithms/sortingAlgorithms';
 
 var windowWidth = (window.innerWidth / 6);
 
+var windowHeight = (window.innerHeight - 200);
+
 // Change this value for the speed of the animations
 const ANIMATION_SPEED_MS = 1;
 
@@ -33,7 +35,8 @@ export default class SortingVisualizer extends React.Component {
     resetArray() {
         const array = [];
         for (let i = 0; i < NUMBER_OF_ARRAY_BARS; i++) {
-            array.push(randomIntFromInterval(5, 730));
+            // array.push(randomIntFromInterval(5, 730));
+            array.push(randomIntFromInterval(5, `${windowHeight}`));
         }
         this.setState({array});
     }
@@ -96,13 +99,14 @@ export default class SortingVisualizer extends React.Component {
             <div className="visualizer-container">
 
                 <div className="button-container">
-                    <button onClick={() => this.testSortingAlgorithms()}>Test</button>
+                    {/* <button onClick={() => this.testSortingAlgorithms()}>Test</button> */}
                     <button onClick={() => this.resetArray()}>Generate New Array</button>
                     <button onClick={() => this.mergeSort()}>Merge Sort</button>
-                    <button onClick={() => this.resetArray()}>Quick Sort</button>
-                    <button onClick={() => this.resetArray()}>Heap Sort</button>
-                    <button onClick={() => this.resetArray()}>Bubble Sort</button>
-                    <button onClick={() => console.log(window.innerWidth)}>Container Width in Console</button>
+                    {/* <button onClick={() => this.resetArray()}>Quick Sort</button> */}
+                    {/* <button onClick={() => this.resetArray()}>Heap Sort</button> */}
+                    {/* <button onClick={() => this.resetArray()}>Bubble Sort</button> */}
+                    {/* <button onClick={() => console.log(window.innerWidth)}>Container Width in Console</button> */}
+                    <button onClick={() => console.log(window.innerHeight)}>Container Height in Console</button>
                 </div>
 
                 <div className="array-container">
